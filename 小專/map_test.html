@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>附近的酒吧</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .bar-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .bar-info {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .bar-info:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .bar-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .distance {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .status {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .loading {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .error {
+            color: #e74c3c;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>尋找附近的酒吧</h1>
+    </header>
+
+    <div class="container">
+        <div class="status" id="status">請點擊下方按鈕以尋找附近的酒吧</div>
+
+        <button id="findBars">尋找附近的酒吧</button>
+
+        <div id="loading" class="loading" style="display:none;">正在搜尋附近的酒吧...</div>
+        <div id="error" class="error" style="display:none;"></div>
+
+        <div id="barResults" class="bar-container" style="display:none;"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const statusElement = document.getElementById('status');
+            const loadingElement = document.getElementById('loading');
+            const errorElement = document.getElementById('error');
+            const barResultsElement = document.getElementById('barResults');
+            const findBarsButton = document.getElementById('findBars');
+
+            // 模擬酒吧數據 (實際應用中應該是從API獲取)
+            const mockBars = [
+                {
+                    name: "PUZZLE Bar",
+                    address: "台北市大安區敦化南路一段190巷16號",
+                    rating: 4.5,
+                    distance: 0.3,
+                    openNow: true,
+                    phone: "02-2731-3380"
+                },
+                {
+                    name: "BAR MOOD",
+                    address: "台北市大安區復興南路一段107巷5弄13號",
+                    rating: 4.7,
+                    distance: 0.8,
+                    openNow: true,
+                    phone: "02-2711-8828"
+                },
+                {
+                    name: "Sidebar",
+                    address: "台北市信義區松智路17號",
+                    rating: 4.3,
+                    distance: 1.2,
+                    openNow: false,
+                    phone: "02-2720-1919"
+                },
+                {
+                    name: "AHA Saloon",
+                    address: "台北市大安區安和路一段75巷2號",
+                    rating: 4.8,
+                    distance: 1.5,
+                    openNow: true,
+                    phone: "02-2755-0732"
+                }
+            ];
+
+            findBarsButton.addEventListener('click', function () {
+                if (navigator.geolocation) {
+                    // 顯示加載狀態
+                    statusElement.style.display = 'none';
+                    loadingElement.style.display = 'block';
+                    errorElement.style.display = 'none';
+                    barResultsElement.style.display = 'none';
+
+                    // 請求用戶位置
+                    navigator.geolocation.getCurrentPosition(
+                        function (position) {
+                            // 成功獲取位置
+                            loadingElement.style.display = 'none';
+
+                            // 在實際應用中，這裡應該調用地圖API (如Google Maps)
+                            // 來獲取附近的酒吧，使用position.coords.latitude和position.coords.longitude
+
+                            // 為了示範，我們使用模擬數據
+                            displayBars(mockBars, position);
+                        },
+                        function (error) {
+                            // 獲取位置失敗
+                            loadingElement.style.display = 'none';
+                            errorElement.style.display = 'block';
+
+                            switch (error.code) {
+                                case error.PERMISSION_DENIED:
+                                    errorElement.textContent = "您拒絕了位置請求，無法為您找到附近的酒吧。";
+                                    break;
+                                case error.POSITION_UNAVAILABLE:
+                                    errorElement.textContent = "位置資訊不可用。";
+                                    break;
+                                case error.TIMEOUT:
+                                    errorElement.textContent = "獲取位置請求超時。";
+                                    break;
+                                case error.UNKNOWN_ERROR:
+                                    errorElement.textContent = "發生未知錯誤。";
+                                    break;
+                            }
+                        },
+                        {
+                            enableHighAccuracy: true,
+                            timeout: 10000,
+                            maximumAge: 0
+                        }
+                    );
+                } else {
+                    // 瀏覽器不支持地理位置
+                    errorElement.style.display = 'block';
+                    errorElement.textContent = "您的瀏覽器不支持地理位置功能，無法為您找到附近的酒吧。";
+                }
+            });
+
+            function displayBars(bars, position) {
+                // 清空結果區域
+                barResultsElement.innerHTML = '';
+
+                // 按距離排序酒吧
+                // 在實際應用中，距離會根據用戶的實際位置計算
+                // 這裡我們使用模擬數據中的距離
+                const sortedBars = [...bars].sort((a, b) => a.distance - b.distance);
+
+                // 如果沒有找到酒吧
+                if (sortedBars.length === 0) {
+                    errorElement.style.display = 'block';
+                    errorElement.textContent = "附近找不到酒吧，請嘗試增大搜索範圍。";
+                    return;
+                }
+
+                // 顯示找到的酒吧
+                sortedBars.forEach(bar => {
+                    const barElement = document.createElement('div');
+                    barElement.className = 'bar-info';
+
+                    const statusText = bar.openNow ? '現在營業中' : '目前未營業';
+                    const statusColor = bar.openNow ? 'green' : 'red';
+
+                    barElement.innerHTML = `
+                        <div class="bar-name">${bar.name}</div>
+                        <div><strong>地址：</strong>${bar.address}</div>
+                        <div><strong>評分：</strong>${bar.rating} / 5</div>
+                        <div><strong>距離：</strong><span class="distance">${bar.distance} 公里</span></div>
+                        <div><strong>營業狀態：</strong><span style="color:${statusColor}">${statusText}</span></div>
+                        <div><strong>電話：</strong>${bar.phone}</div>
+                    `;
+
+                    barResultsElement.appendChild(barElement);
+                });
+
+                // 顯示結果
+                barResultsElement.style.display = 'block';
+
+                // 更新狀態
+                statusElement.style.display = 'block';
+                statusElement.textContent = `已為您找到 ${sortedBars.length} 家附近的酒吧`;
+            }
+        });
+    </script>
+</body>
+
+</html>
