@@ -21,7 +21,7 @@ body {
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1200px;
+    max-width: 80%px;
   }
 }
 
@@ -61,19 +61,24 @@ nav a:hover {
 .card {
   border-color: var(--whiskey-brown);
   box-shadow: 0 2px 5px rgba(89, 32, 19, 0.1);
-  border-radius: 5px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .card-body {
-  padding: 8px;
+  padding: 0px;
 }
 
 .card-footer {
   background-color: rgba(140, 93, 65, 0.1);
 }
 
+.content-container {
+  padding: 8px;
+}
+
 .card-title {
-  margin: 8px 0;
+  /* margin: 8px; */
   /* font-size: 16px;
   font-weight: 600; */
 }
