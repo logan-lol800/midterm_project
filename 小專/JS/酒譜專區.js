@@ -2,7 +2,7 @@
 const cocktailRecipes = [
   {
     id: 1,
-    title: "Gin Tonic   琴湯尼",
+    title: "Gin Tonic",
     description: "簡單清爽的經典調酒，以琴酒和通寧水為基底。",
     image: "./圖/gin-tonic.jpg",
     tags: ["琴酒", "簡易", "氣泡"],
@@ -292,15 +292,16 @@ function renderCards(page) {
     recipeCard.className = "recipe-card";
 
     recipeCard.innerHTML = `
-        <div class="g-col-lg-3 g-col-md-4 g-col-6">
+        <div class="col mt-3 mb-2">
             <div class="card">
                 <div class="card-body">
                     <div class="img-container">
                         <a href=""><img class="card-img" src="${recipe.image}"></a>
                     </div>
-                    <h5 class="card-title">${recipe.title}</h5>
-                    <p class="card-text">${recipe.description}</p>
-                    <div>${recipe.tags}</div>
+                    <div class="content-container">
+                        <h5 class="card-title">${recipe.title}</h5>
+                        <p class="card-text">${recipe.description}</p>
+                    </div>    
                 </div>
                 <div class="card-footer text-end">
                     ${recipe.id}
@@ -370,4 +371,7 @@ function renderPagination() {
     nextButton.textContent = "下一頁";
     paginationContainer.appendChild(nextButton);
   }
+
+  // 回到頂部
+  window.scrollTo(0, 0);
 }
