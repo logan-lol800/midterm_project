@@ -20,10 +20,12 @@
         <nav class="d-flex justify-content-between shadow fixed-top" style="height: 56px;padding: 0 20px;">
             <div class="d-flex align-items-center">
                 <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav"
-                    aria-controls="offcanvas-nav" style="margin-right: 4px ;margin-left: -12px;"><img
+                    aria-controls="offcanvas-nav" style="margin-right: 4px ;margin-left: -12px;" id="menu-btn"><img
                         src="./圖/burger-bar.png"></button>
-                <a href="#"><img src="./圖/icons8-cocktail-shaker-48.png"></a>
-                <input class="ms-3 rounded-pill h-75 px-3" type="search" name="" id="" placeholder="搜尋 口袋酒吧">
+                <a href="#"><img src="./圖/icons8-cocktail-shaker-48.png" id="shaker" class="rounded-circle"></a>
+                <button class="btn d-sm-none rounded-circle" id="searchBtn" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-search"><img src="./圖/loupe.png" id="searchImg"></button>
+                <input class="ms-3 rounded-pill px-3 d-none d-sm-block" type="search" placeholder="搜尋 口袋酒吧">
             </div>
 
             <div>
@@ -32,11 +34,11 @@
                     </li>
                     <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./酒譜專區.html">酒譜專區</a>
                     </li>
-                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">討論區</a>
+                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./討論區.html">討論區</a>
                     </li>
-                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">酒吧地圖</a>
+                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./酒吧地圖.html">酒吧地圖</a>
                     </li>
-                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">小知識</a>
+                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./小知識.html">小知識</a>
                     </li>
                     <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">關於我們</a>
                     </li>
@@ -63,12 +65,21 @@
             <ul>
                 <li><a href="./首頁.html">首頁</li></a>
                 <li><a href="./酒譜專區.html">酒譜專區</li></a>
-                <li><a href="#">討論區</li></a>
-                <li><a href="#">酒吧地圖</li></a>
-                <li><a href="#">小知識</li></a>
+                <li><a href="./討論區.html">討論區</li></a>
+                <li><a href="./酒吧地圖.html">酒吧地圖</li></a>
+                <li><a href="./小知識.html">小知識</li></a>
                 <li><a href="#">關於我們</li></a>
             </ul>
         </div>
+    </div>
+
+
+
+
+
+    <div class="collapse  d-sm-none" id="collapse-search"
+        style="position: fixed; background-color: var(--bs-gray-500);width: 100%; z-index: 1;padding: 6px 10px;">
+        <input class="w-100 rounded-pill ps-3" type="search" placeholder="搜尋 口袋酒吧" style="height: 30px;">
     </div>
 
 
@@ -324,8 +335,6 @@
 
 
 
-
-
     <!-- <div class="container pt-5 px-4">
         <div class="p-3">酒譜專區</div>
 
@@ -351,6 +360,14 @@
                     Febrian Hidayat - Flaticon</a></p>
             <p class="m-0"><a href="https://www.flaticon.com/free-icons/login" title="login icons">Login icons created
                     by Freepik - Flaticon</a></p>
+            <p class="m-0"><a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons
+                    created by Freepik - Flaticon</a></p>
+            <p class="m-0"><a href="https://www.flaticon.com/free-icons/map" title="map icons">Map icons created by
+                    Freepik - Flaticon</a></p>
+            <p class="m-0"><a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created
+                    by Vlad Szirka - Flaticon</a></p>
+            <p class="m-0"><a href="https://www.flaticon.com/free-icons/bookmark" title="bookmark icons">Bookmark icons
+                    created by inkubators - Flaticon</a></p>
         </div>
     </footer>
 

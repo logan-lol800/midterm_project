@@ -267,7 +267,7 @@ const cardPerPage = 16;
 let currentPage = 1;
 const totalPage = Math.ceil(cocktailRecipes.length / cardPerPage);
 
-// 載入分頁渲染
+// 載入時渲染分頁
 document.addEventListener("DOMContentLoaded", () => {
   renderCards(currentPage);
   renderPagination();
@@ -292,11 +292,11 @@ function renderCards(page) {
     recipeCard.className = "recipe-card";
 
     recipeCard.innerHTML = `
-        <div class="col mt-3 mb-2">
+        <div class="col mt-4">
             <div class="card">
                 <div class="card-body">
                     <div class="img-container">
-                        <a href=""><img class="card-img" src="${recipe.image}"></a>
+                        <a href=""><img class="card-img" src=${recipe.image}></a>
                     </div>
                     <div class="content-container">
                         <h5 class="card-title">${recipe.title}</h5>

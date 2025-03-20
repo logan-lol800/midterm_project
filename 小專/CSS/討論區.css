@@ -106,7 +106,7 @@ nav input {
 .card-title {
   /* margin: 8px; */
   /* font-size: 16px;
-  font-weight: 600; */
+    font-weight: 600; */
 }
 
 .card-text {
@@ -147,8 +147,20 @@ nav input {
   overflow: hidden;
 }
 
-.disc img {
+.article img {
   border-radius: 8px;
+}
+
+.article .col {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
+}
+
+.article:last-child > .col {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* 酒吧地圖 */
@@ -210,8 +222,8 @@ nav input {
   border-radius: 8px;
 }
 /* .border {
-  border-color: var(--whiskey-brown) !important;
-} */
+    border-color: var(--whiskey-brown) !important;
+  } */
 
 .row.border.rounded {
   background-color: rgba(242, 204, 92, 0.1);

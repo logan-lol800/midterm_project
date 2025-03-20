@@ -23,7 +23,9 @@
                     aria-controls="offcanvas-nav" style="margin-right: 4px ;margin-left: -12px;" id="menu-btn"><img
                         src="./圖/burger-bar.png"></button>
                 <a href="#"><img src="./圖/icons8-cocktail-shaker-48.png" id="shaker" class="rounded-circle"></a>
-                <input class="ms-3 rounded-pill px-3" type="search" name="" id="" placeholder="搜尋 口袋酒吧">
+                <button class="btn d-sm-none rounded-circle" id="searchBtn" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-search"><img src="./圖/loupe.png" id="searchImg"></button>
+                <input class="ms-3 rounded-pill px-3 d-none d-sm-block" type="search" placeholder="搜尋 口袋酒吧">
             </div>
 
             <div>
@@ -32,11 +34,11 @@
                     </li>
                     <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./酒譜專區.html">酒譜專區</a>
                     </li>
-                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">討論區</a>
+                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./討論區.html">討論區</a>
                     </li>
-                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">酒吧地圖</a>
+                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./酒吧地圖.html">酒吧地圖</a>
                     </li>
-                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">小知識</a>
+                    <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="./小知識.html">小知識</a>
                     </li>
                     <li><a class="h-100 d-flex align-items-center px-3 text-decoration-none" href="#">關於我們</a>
                     </li>
@@ -63,9 +65,9 @@
             <ul>
                 <li><a href="./首頁.html">首頁</li></a>
                 <li><a href="./酒譜專區.html">酒譜專區</li></a>
-                <li><a href="#">討論區</li></a>
-                <li><a href="#">酒吧地圖</li></a>
-                <li><a href="#">小知識</li></a>
+                <li><a href="./討論區.html">討論區</li></a>
+                <li><a href="./酒吧地圖.html">酒吧地圖</li></a>
+                <li><a href="./小知識.html">小知識</li></a>
                 <li><a href="#">關於我們</li></a>
             </ul>
         </div>
@@ -75,20 +77,29 @@
 
 
 
-    <section>
-        <div class="container pt-5 px-4 mb-2">
+    <div class="collapse  d-sm-none" id="collapse-search"
+        style="position: fixed; background-color: var(--bs-gray-500);width: 100%; z-index: 1;padding: 6px 10px;">
+        <input class="w-100 rounded-pill ps-3" type="search" placeholder="搜尋 口袋酒吧" style="height: 30px;">
+    </div>
+
+
+
+
+
+    <section class="recipe">
+        <div class="container pt-5 px-4 pb-3">
             <div class="p-3">在家也想DIY</div>
 
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-6 mt-3 mb-2">
+                <div class="col-lg-3 col-md-4 col-6 mt-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="img-container">
                                 <a href="#"><img class="card-img" src="./圖/gin-tonic.jpg"></a>
                             </div>
                             <div class="content-container">
-                                <h5 class="card-title">千陽號</h5>
-                                <p class="card-text">sunny</p>
+                                <h5 class="card-title">Gin Tonic</h5>
+                                <p class="card-text">簡單清爽的經典調酒，以琴酒和通寧水為基底。</p>
                             </div>
                         </div>
                         <div class="card-footer text-end">
@@ -97,15 +108,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-6 mt-3 mb-2">
+                <div class="col-lg-3 col-md-4 col-6 mt-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="img-container">
                                 <a href="#"><img class="card-img" src="./圖/old-fashion.jpg"></a>
                             </div>
                             <div class="content-container">
-                                <h5 class="card-title">千陽號</h5>
-                                <p class="card-text">sunny</p>
+                                <h5 class="card-title">Old Fashion</h5>
+                                <p class="card-text">簡約經典的威士忌雞尾酒，帶有苦精香氣和細微甜味。</p>
                             </div>
                         </div>
                         <div class="card-footer text-end">
@@ -114,15 +125,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-6 mt-3 mb-2">
+                <div class="col-lg-3 col-md-4 col-6 mt-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="img-container">
                                 <a href="#"><img class="card-img" src="./圖/daiquiri.jpg"></a>
                             </div>
                             <div class="content-container">
-                                <h5 class="card-title">千陽號</h5>
-                                <p class="card-text">sunny</p>
+                                <h5 class="card-title">Daiquiri</h5>
+                                <p class="card-text">優雅的香檳雞尾酒，混合琴酒、檸檬汁和香檳。</p>
                             </div>
                         </div>
                         <div class="card-footer text-end">
@@ -131,15 +142,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-6 d-md-none d-lg-block mt-3 mb-2">
+                <div class="col-lg-3 col-6 d-md-none d-lg-block mt-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="img-container">
                                 <a href="#"><img class="card-img" src="./圖/margarita.jpg"></a>
                             </div>
                             <div class="content-container">
-                                <h5 class="card-title">千陽號</h5>
-                                <p class="card-text">sunny</p>
+                                <h5 class="card-title">瑪格麗特</h5>
+                                <p class="card-text">墨西哥風味的經典雞尾酒，以龍舌蘭、萊姆和橙酒調製。</p>
                             </div>
                         </div>
                         <div class="card-footer text-end">
@@ -154,11 +165,11 @@
 
 
 
-    <section>
-        <div class="container pt-5 px-4">
-            <div class="p-3">只想在家吃瓜</div>
+    <section class="disc">
+        <div class="container pt-5 px-4 pb-3">
+            <div class="p-3">只想待在家吃瓜</div>
 
-            <div class="row row-cols-1 pt-3">
+            <div class="row row-cols-1 pt-4">
                 <div class="col pb-3 mb-3" style="border-bottom: 1px solid gray;">
                     <div class="row">
                         <div class="col-9">
@@ -175,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="col pb-3 mb-3">
+                <div class="col">
                     <div class="row">
                         <div class="col-9">
                             <p class="fw-bold">笑死 出這種酒不如買水來喝ㄟ😌</p>
@@ -198,14 +209,14 @@
 
 
 
-    <section>
-        <div class="container pt-5 px-4">
+    <section class="map">
+        <div class="container pt-5 px-4 pb-3">
             <div class="p-3">出門買醉看這邊</div>
 
-            <div class="pt-3">
+            <div class="pt-4">
                 <div class="d-flex">
                     <div class="status me-3" id="status">請允許定位服務存取您的位置資訊，以尋找附近的喝酒好去處！</div>
-                    <button class=" btn ms-auto p-0" id="findBars">photo</button>
+                    <button class="btn ms-auto" id="findBars">photo</button>
                 </div>
 
                 <div class="loading" id="loading" style="display:none;">正在搜尋附近的酒吧...</div>
@@ -220,11 +231,11 @@
 
 
 
-    <section>
+    <section class="know">
         <div class="container pt-5 px-4">
-            <div class="p-3">小知識</div>
+            <div class="p-3">每日一則小知識</div>
 
-            <div class="row pt-3">
+            <div class="row pt-4">
                 <div class="col-md-9 d-flex align-items-center">
                     <div class="w-100">
                         <div>
