@@ -120,15 +120,14 @@ nav input {
 .img-container {
   position: relative;
   width: 100%;
-  padding-top: 100%;
-  /* 設定1:1比例的背板 */
+  padding-top: 75%;
+  /* 設定4:3比例的背板 */
   overflow: hidden;
 }
 
 .card-img {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -148,20 +147,8 @@ nav input {
   overflow: hidden;
 }
 
-.disc-imgCon {
-  position: relative;
-  width: 100%;
-  padding-top: 75%;
-}
-
-.disc-imgCon img {
+.disc img {
   border-radius: 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* 酒吧地圖 */
@@ -219,22 +206,9 @@ nav input {
 }
 
 /* 邊框和小知識區塊 */
-.know-imgCon {
-  position: relative;
-  width: 100%;
-  padding-top: 75%;
-}
-
-.know-imgCon img {
+.know img {
   border-radius: 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
-
 /* .border {
   border-color: var(--whiskey-brown) !important;
 } */

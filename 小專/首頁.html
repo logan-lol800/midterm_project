@@ -46,12 +46,39 @@
             </div>
 
             <div class="d-flex align-items-center">
-                <a class="btn" id="btn-login">登入</a>
+                <button class="btn" id="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">登入</button>
             </div>
         </nav>
 
         <div style="margin-top: 56px;"></div>
     </header>
+
+
+
+    <!-- The Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">請先登入</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn mx-auto w-50">登入</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
@@ -79,7 +106,7 @@
 
     <div class="collapse  d-sm-none" id="collapse-search"
         style="position: fixed; background-color: var(--bs-gray-500);width: 100%; z-index: 1;padding: 6px 10px;">
-        <input class="w-100 rounded-pill ps-3" type="search" placeholder="搜尋 口袋酒吧" style="height: 30px;">
+        <input class="w-100 rounded-pill px-3" type="search" placeholder="搜尋 口袋酒吧" style="height: 30px;">
     </div>
 
 
@@ -179,8 +206,8 @@
                         </div>
 
                         <div class="col-3 d-flex align-items-center">
-                            <div>
-                                <img class="w-100" src="./圖/puzzle-bar.jpg">
+                            <div class="disc-imgCon">
+                                <img src="./圖/puzzle-bar.jpg">
                             </div>
                         </div>
                     </div>
@@ -190,13 +217,13 @@
                     <div class="row">
                         <div class="col-9">
                             <p class="fw-bold">笑死 出這種酒不如買水來喝ㄟ😌</p>
-                            <span class="disc-text">原本想說終於放假了，可以和朋友好好爽喝一波，結果直接採雷🫠 而且聽說調酒師背景很複雜，有人有卦嗎
+                            <span class="disc-text">原本想說終於放假了，可以和朋友好好爽喝一波，結果直接踩雷🫠 而且聽說調酒師背景很複雜，有人有卦嗎
                             </span>
                         </div>
 
                         <div class="col-3 d-flex align-items-center">
-                            <div>
-                                <img class="w-100" src="./圖/吃瓜-2.png">
+                            <div class="disc-imgCon">
+                                <img src="./圖/吃瓜-2.png">
                             </div>
                         </div>
                     </div>
@@ -254,8 +281,8 @@
                 </div>
 
                 <div class="col-md-3 d-flex align-items-center text-center">
-                    <div>
-                        <img class="w-75" src="./圖/一杯威士忌在酒吧吧檯上的特寫照 10-03-2025 at 21-52-40.jpeg">
+                    <div class="know-imgCon">
+                        <img src="./圖/一杯威士忌在酒吧吧檯上的特寫照 10-03-2025 at 21-52-40.jpeg">
                     </div>
                 </div>
             </div>
