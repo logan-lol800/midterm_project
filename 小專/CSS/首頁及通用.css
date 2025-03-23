@@ -19,6 +19,7 @@ body {
   color: #333;
 }
 
+/* 畫面寬度設定 */
 @media (min-width: 1400px) {
   .container {
     max-width: 80%;
@@ -75,6 +76,83 @@ nav input {
   border-color: var(--whiskey-rust);
 }
 
+/* 登入彈出視窗 */
+.modal-dialog {
+  top: 100px;
+}
+
+.modal-header {
+  border: 0px;
+}
+
+.modal-body {
+  padding: 32px 48px;
+}
+
+.check-box div:first-child {
+  margin-right: 8px;
+}
+
+.check-box input {
+  margin-right: 3px;
+}
+
+.modal-body div > button {
+  margin-top: 20px;
+}
+
+/* 使用者頭像 */
+#user-img {
+  border: 0px;
+  padding: 0;
+}
+
+#user-img > img {
+  height: 40px;
+}
+
+/* 使用者下拉介面 */
+#signOut {
+  position: fixed;
+  right: 20px;
+  top: 51px;
+  z-index: 1200;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#signOut > ul {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0px;
+  background-color: rgb(225, 222, 222);
+  width: 100px;
+}
+
+#signOut > ul > li img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+#signOut > ul > li:last-child img {
+  margin-left: 3px;
+}
+
+#signOut > ul > li {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#signOut > ul > li:last-child {
+  margin-bottom: 0px;
+}
+
+#signOut > ul > li:hover {
+  cursor: pointer;
+  color: var(--whiskey-rust);
+}
+
 /* 區塊標題 */
 .p-3 {
   color: var(--whiskey-dark);
@@ -97,6 +175,14 @@ nav input {
 
 .card-footer {
   background-color: rgba(140, 93, 65, 0.1);
+}
+
+.card-footer img {
+  height: 20px;
+}
+
+.card-footer img:hover {
+  cursor: pointer;
 }
 
 .content-container {
@@ -141,6 +227,18 @@ nav input {
 }
 
 /* 討論區 */
+.disc .row > .col {
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+}
+
+.disc .row > .col:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 .disc-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -152,6 +250,7 @@ nav input {
   position: relative;
   width: 100%;
   padding-top: 75%;
+  /* 設定4:3比例的背板 */
 }
 
 .disc-imgCon img {
@@ -165,6 +264,7 @@ nav input {
 }
 
 /* 酒吧地圖 */
+
 .bar-container {
   background-color: white;
   border-radius: 8px;
@@ -173,15 +273,15 @@ nav input {
 }
 
 .bar-info {
-  margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
+  margin-bottom: 15px;
 }
 
 .bar-info:last-child {
+  padding-bottom: 0;
   border-bottom: none;
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .bar-name {
@@ -201,10 +301,17 @@ nav input {
   background-color: #f8f9fa;
   border-radius: 4px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .map .btn {
+  padding: 10px;
   margin-bottom: 20px;
+  border: 0px;
+}
+
+.map .btn img {
+  height: 50px;
 }
 
 .loading {
@@ -223,6 +330,7 @@ nav input {
   position: relative;
   width: 100%;
   padding-top: 75%;
+  /* 設定4:3比例的背板 */
 }
 
 .know-imgCon img {
@@ -235,13 +343,9 @@ nav input {
   object-fit: cover;
 }
 
-/* .border {
-  border-color: var(--whiskey-brown) !important;
-} */
-
-.row.border.rounded {
+/* .row.border.rounded {
   background-color: rgba(242, 204, 92, 0.1);
-}
+} */
 
 /* offcanvas-nav樣式 */
 #offcanvas-nav ul {
@@ -268,11 +372,25 @@ nav input {
 /* 搜尋框 */
 input[type="search"] {
   border: 1px solid var(--whiskey-brown);
+  background-color: whitesmoke;
 }
 
 input[type="search"]:focus {
   border-color: var(--whiskey-orange);
   box-shadow: 0 0 0 0.2rem rgba(242, 145, 60, 0.25);
+}
+
+#collapse-search {
+  position: fixed;
+  background-color: var(--bs-gray-500);
+  width: 100%;
+  z-index: 1;
+  padding: 6px 10px;
+}
+
+#collapse-search > input {
+  height: 30px;
+  background-color: whitesmoke;
 }
 
 /* 頁腳 */

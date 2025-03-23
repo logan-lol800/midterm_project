@@ -23,7 +23,7 @@ const cocktailRecipes = [
   },
   {
     id: 4,
-    title: "瑪格麗特",
+    title: "Margarita",
     description: "墨西哥風味的經典雞尾酒，以龍舌蘭、萊姆和橙酒調製。",
     image: "./圖/margarita.jpg",
     tags: ["龍舌蘭", "酸味", "鹽緣"],

@@ -1,3 +1,41 @@
+// 檢查是否為登入狀態
+if (localStorage.getItem("isLoggedIn") === "true") {
+  document.getElementById("btn-login").classList.add("d-none");
+  document.getElementById("user-img").classList.remove("d-none");
+}
+
+// 登入功能
+document.getElementById("login-form").addEventListener("submit", () => {
+  event.preventDefault();
+
+  const loginData = [
+    {
+      account: "user@mail.com",
+      password: "12345",
+      name: "阿展",
+    },
+  ];
+
+  const account = document.getElementById("account").value;
+  const password = document.getElementById("password").value;
+
+  const user = loginData.find(
+    (obj) => obj.account === account && obj.password === password
+  );
+
+  if (user) {
+    alert(`歡迎 ${user.name}！`);
+    // 存入localStorage, 表示使用者已登入
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("username", user.name);
+    document.getElementById("btn-login").classList.add("d-none");
+    document.getElementById("user-img").classList.remove("d-none");
+  } else {
+    alert("帳號或密碼錯誤，請重試謝謝！");
+  }
+});
+
+// 地圖功能
 document.addEventListener("DOMContentLoaded", function () {
   const statusElement = document.getElementById("status");
   const loadingElement = document.getElementById("loading");
@@ -38,6 +76,54 @@ document.addEventListener("DOMContentLoaded", function () {
       distance: 1.5,
       openNow: true,
       phone: "02-2755-0732",
+    },
+    {
+      name: "經典酒吧",
+      address: "台中市酒吧區經典路12號",
+      rating: 4.5,
+      distance: 0.5,
+      openNow: false,
+      phone: "04-4444-4444",
+    },
+    {
+      name: "秘境酒吧",
+      address: "台中市酒吧區秘境路5號",
+      rating: 4.2,
+      distance: 0.9,
+      openNow: true,
+      phone: "04-6666-6666",
+    },
+    {
+      name: "奇妙酒吧",
+      address: "台中市酒吧區奇妙路8號",
+      rating: 3.5,
+      distance: 1.0,
+      openNow: false,
+      phone: "04-7777-7777",
+    },
+    {
+      name: "微醺酒吧",
+      address: "台中市酒吧區微醺路2號",
+      rating: 4.6,
+      distance: 1.3,
+      openNow: true,
+      phone: "04-8888-8888",
+    },
+    {
+      name: "暢聊酒吧",
+      address: "台中市酒吧區暢聊路4號",
+      rating: 3.8,
+      distance: 1.8,
+      openNow: false,
+      phone: "04-9999-9999",
+    },
+    {
+      name: "隱藏版酒吧",
+      address: "台中市酒吧區隱藏路7號",
+      rating: 4.9,
+      distance: 2.0,
+      openNow: true,
+      phone: "02-1234-5678",
     },
   ];
 
@@ -121,13 +207,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const statusColor = bar.openNow ? "green" : "red";
 
       barElement.innerHTML = `
-            <div class="bar-name">${bar.name}</div>
-            <div><strong>地址：</strong>${bar.address}</div>
-            <div><strong>評分：</strong>${bar.rating} / 5</div>
-            <div><strong>距離：</strong><span class="distance">${bar.distance} 公里</span></div>
-            <div><strong>營業狀態：</strong><span style="color:${statusColor}">${statusText}</span></div>
-            <div><strong>電話：</strong>${bar.phone}</div>
-        `;
+              <div class="bar-name">${bar.name}</div>
+              <div><strong>地址：</strong>${bar.address}</div>
+              <div><strong>評分：</strong>${bar.rating} / 5</div>
+              <div><strong>距離：</strong><span class="distance">${bar.distance} 公里</span></div>
+              <div><strong>營業狀態：</strong><span style="color:${statusColor}">${statusText}</span></div>
+              <div><strong>電話：</strong>${bar.phone}</div>
+          `;
 
       barResultsElement.appendChild(barElement);
     });
