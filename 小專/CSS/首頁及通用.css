@@ -89,6 +89,17 @@ nav input {
   padding: 32px 48px;
 }
 
+.modal-body > .d-flex div {
+  flex: 1;
+  margin: 0 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.modal-body > .d-flex div:hover {
+  cursor: pointer;
+}
+
 .check-box div:first-child {
   margin-right: 8px;
 }
@@ -112,7 +123,7 @@ nav input {
 }
 
 /* 使用者下拉介面 */
-#signOut {
+#user-dropdown {
   position: fixed;
   right: 20px;
   top: 51px;
@@ -121,7 +132,7 @@ nav input {
   overflow: hidden;
 }
 
-#signOut > ul {
+#user-dropdown > ul {
   list-style-type: none;
   padding: 20px;
   margin: 0px;
@@ -129,26 +140,26 @@ nav input {
   width: 100px;
 }
 
-#signOut > ul > li img {
+#user-dropdown > ul > li img {
   height: 20px;
   margin-right: 5px;
 }
 
-#signOut > ul > li:last-child img {
+#user-dropdown > ul > li:last-child img {
   margin-left: 3px;
 }
 
-#signOut > ul > li {
+#user-dropdown > ul > li {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
 
-#signOut > ul > li:last-child {
+#user-dropdown > ul > li:last-child {
   margin-bottom: 0px;
 }
 
-#signOut > ul > li:hover {
+#user-dropdown > ul > li:hover {
   cursor: pointer;
   color: var(--whiskey-rust);
 }
@@ -263,6 +274,15 @@ nav input {
   object-fit: cover;
 }
 
+.disc a {
+  color: #333;
+  text-decoration: none;
+}
+
+.disc a:hover p {
+  color: var(--whiskey-rust);
+}
+
 /* 酒吧地圖 */
 
 .bar-container {
@@ -341,6 +361,15 @@ nav input {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.know a {
+  color: #333;
+  text-decoration: none;
+}
+
+.know .row.pt-4:hover a {
+  text-decoration: underline;
 }
 
 /* .row.border.rounded {

@@ -5,16 +5,16 @@ if (localStorage.getItem("isLoggedIn") === "true") {
 }
 
 // 登入功能
+const loginData = [
+  {
+    account: "user@mail.com",
+    password: "12345",
+    name: "阿展",
+  },
+];
+
 document.getElementById("login-form").addEventListener("submit", () => {
   event.preventDefault();
-
-  const loginData = [
-    {
-      account: "user@mail.com",
-      password: "12345",
-      name: "阿展",
-    },
-  ];
 
   const account = document.getElementById("account").value;
   const password = document.getElementById("password").value;
@@ -33,6 +33,40 @@ document.getElementById("login-form").addEventListener("submit", () => {
   } else {
     alert("帳號或密碼錯誤，請重試謝謝！");
   }
+});
+
+// 註冊功能
+document.getElementById("register-form").addEventListener("submit", () => {
+  event.preventDefault();
+
+  const account = document.getElementById("register-account").value;
+  const password = document.getElementById("register-password").value;
+  const name = document.getElementById("register-name").value;
+
+  loginData.push({ account: account, password: password, name: name });
+  alert("註冊成功");
+});
+
+// 登入、註冊介面切換
+document.getElementById("register").addEventListener("click", () => {
+  document.getElementById("register-form").classList.remove("d-none");
+  document.getElementById("login-form").classList.add("d-none");
+});
+
+document.getElementById("login").addEventListener("click", () => {
+  document.getElementById("register-form").classList.add("d-none");
+  document.getElementById("login-form").classList.remove("d-none");
+});
+
+// 登出功能
+document.getElementById("signout").addEventListener("click", () => {
+  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("username");
+  alert("已登出！");
+  document.getElementById("btn-login").classList.remove("d-none");
+  document.getElementById("user-img").classList.add("d-none");
+  // 粗糙一次性登出！
+  document.getElementById("user-dropdown").classList.add("d-none");
 });
 
 // 地圖功能

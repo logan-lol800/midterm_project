@@ -47,7 +47,7 @@
 
             <div class="d-flex align-items-center">
                 <button class="btn" id="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">登入</button>
-                <button class="btn d-none" id="user-img" data-bs-toggle="collapse" data-bs-target="#signOut"><img
+                <button class="btn d-none" id="user-img" data-bs-toggle="collapse" data-bs-target="#user-dropdown"><img
                         src="./圖/login.png"></button>
             </div>
         </nav>
@@ -64,16 +64,22 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">會員登入</h4>
+                    <h4 class="modal-title">會員登入系統</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
+                    <div class="d-flex">
+                        <div id="login">登入</div>
+                        <div id="register">註冊</div>
+                    </div>
+                    <hr>
+
                     <form action="" id="login-form">
                         <div class="form-floating mb-2">
-                            <input type="email" class="form-control" id="account" placeholder="電子信箱或手機" name="account">
-                            <label for="account">電子信箱或手機</label>
+                            <input type="email" class="form-control" id="account" placeholder="電子信箱" name="account">
+                            <label for="account">電子信箱</label>
                         </div>
 
                         <div class="form-floating mb-2">
@@ -95,6 +101,31 @@
                             <button type="submit" class="btn mx-auto w-50" id="submit-btn">登入</button>
                         </div>
                     </form>
+
+                    <form action="" class="d-none" id="register-form">
+                        <div class="form-floating mb-2">
+                            <input type="email" class="form-control" id="register-account" placeholder="電子信箱"
+                                name="register-account">
+                            <label for="account">電子信箱</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="password" class="form-control" id="register-password" placeholder="密碼"
+                                name="register-password">
+                            <label for="password">密碼</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="register-name" placeholder="名字"
+                                name="register-name">
+                            <label for="password">名字</label>
+                        </div>
+
+                        <div class="d-flex">
+                            <button type="submit" class="btn mx-auto w-50" id="register-submit-btn">註冊</button>
+                        </div>
+
+                    </form>
                 </div>
 
                 <!-- Modal footer -->
@@ -108,11 +139,11 @@
 
 
 
-    <div class="collapse" id="signOut">
+    <div class="collapse" id="user-dropdown">
         <ul class="shadow">
-            <li>喜歡</li>
-            <li>珍藏</li>
-            <li>登出</li>
+            <li class="d-flex"><img src="./圖/heart (1).png"> 喜歡</li>
+            <li class="d-flex"><img src="./圖/ribbon.png"> 珍藏</li>
+            <li class="d-flex" id="signout"><img src="./圖/exit.png"> 登出</li>
         </ul>
     </div>
 

@@ -21,3 +21,12 @@
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+#article-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+#article-container a:hover p {
+  color: var(--whiskey-rust);
+}

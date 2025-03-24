@@ -1,0 +1,636 @@
+/* 主色彩變數定義 */
+:root {
+  --whiskey-yellow: #f2cd5c; /* 淺黃色 - 適合突出顯示 */
+  --whiskey-orange: #f2913d; /* 橙色 - 威士忌的顏色 */
+  --whiskey-brown: #8c5d42; /* 淺棕色 - 木質感 */
+  --whiskey-rust: #bf4f26; /* 鐵鏽紅 - 暖色調 */
+  --whiskey-dark: #361a12; /* 深褐色 - 適合背景 - 加深 */
+  --whiskey-light: #fff6e0; /* 淺米色 - 背景色 */
+
+  /* 新增的顏色變數 */
+  --whiskey-deep-amber: #a3522c; /* 深琥珀色 - 適合強調 */
+  --whiskey-cream: #f9efd9; /* 奶油色 - 淺色背景 */
+  --whiskey-charcoal: #2c2522; /* 炭黑色 - 文字和強調 */
+  --whiskey-gold: #d4af37; /* 金色 - 高貴強調 */
+  --whiskey-copper: #b87333; /* 銅色 - 裝飾元素 */
+}
+
+body {
+  background-color: var(--whiskey-cream);
+  color: var(--whiskey-charcoal);
+  font-family: "Georgia", serif;
+}
+
+/* 畫面寬度設定 */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* 導航欄 */
+nav {
+  background-color: var(--whiskey-charcoal) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+nav a {
+  color: var(--whiskey-gold) !important;
+  font-family: "Palatino", "Georgia", serif;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--whiskey-orange) !important;
+}
+
+#menu-btn {
+  border: 0px;
+  background-color: transparent;
+}
+
+#menu-btn img {
+  filter: invert(80%) sepia(27%) saturate(756%) hue-rotate(358deg)
+    brightness(103%) contrast(92%);
+}
+
+#shaker,
+nav input {
+  height: 40px;
+}
+
+#shaker {
+  background-color: var(--whiskey-light);
+  border: 2px solid var(--whiskey-copper);
+}
+
+#searchBtn {
+  height: 40px;
+  width: 40px;
+  margin: 0 0 0 16px;
+  padding: 0;
+  border: 0;
+  background-color: var(--whiskey-light);
+  border-radius: 50%;
+  border: 1px solid var(--whiskey-copper);
+}
+
+#searchImg {
+  height: 20px;
+  filter: sepia(40%) saturate(500%) hue-rotate(340deg);
+}
+
+#btn-login {
+  background-color: var(--whiskey-deep-amber);
+  border-color: var(--whiskey-deep-amber);
+  color: var(--whiskey-light);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#btn-login:hover {
+  background-color: var(--whiskey-rust);
+  border-color: var(--whiskey-rust);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(191, 79, 38, 0.3);
+}
+
+/* 登入彈出視窗 */
+.modal-dialog {
+  top: 100px;
+}
+
+.modal-content {
+  background-color: var(--whiskey-cream);
+  border: none;
+  box-shadow: 0 5px 20px rgba(44, 37, 34, 0.4);
+  border-radius: 12px;
+}
+
+.modal-header {
+  border: 0px;
+  background-color: var(--whiskey-brown);
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.modal-header h4 {
+  color: var(--whiskey-light);
+  font-family: "Palatino", "Georgia", serif;
+  letter-spacing: 0.5px;
+}
+
+.modal-body {
+  padding: 32px 48px;
+}
+
+.modal-body > .d-flex div {
+  flex: 1;
+  margin: 0 20px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Palatino", "Georgia", serif;
+  color: var(--whiskey-charcoal);
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.modal-body > .d-flex div:hover {
+  cursor: pointer;
+  color: var(--whiskey-deep-amber);
+  border-bottom: 2px solid var(--whiskey-deep-amber);
+}
+
+.form-control {
+  background-color: var(--whiskey-light);
+  border: 1px solid var(--whiskey-brown);
+  color: var(--whiskey-charcoal);
+}
+
+.form-control:focus {
+  border-color: var(--whiskey-gold);
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+.check-box div:first-child {
+  margin-right: 8px;
+}
+
+.check-box input {
+  margin-right: 3px;
+}
+
+.check-box label {
+  color: var(--whiskey-charcoal);
+}
+
+.modal-body div > button {
+  margin-top: 20px;
+  background-color: var(--whiskey-deep-amber);
+  border: none;
+  color: var(--whiskey-light);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.modal-body div > button:hover {
+  background-color: var(--whiskey-rust);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(191, 79, 38, 0.3);
+}
+
+/* 使用者頭像 */
+#user-img {
+  border: 0px;
+  padding: 0;
+}
+
+#user-img > img {
+  height: 40px;
+  background-color: var(--whiskey-light);
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid var(--whiskey-copper);
+}
+
+/* 使用者下拉介面 */
+#user-dropdown {
+  position: fixed;
+  right: 20px;
+  top: 51px;
+  z-index: 1200;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#user-dropdown > ul {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0px;
+  background-color: var(--whiskey-charcoal);
+  width: 120px;
+  border: 1px solid var(--whiskey-copper);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#user-dropdown > ul > li img {
+  height: 20px;
+  margin-right: 5px;
+  filter: invert(80%) sepia(27%) saturate(756%) hue-rotate(358deg)
+    brightness(103%) contrast(92%);
+}
+
+#user-dropdown > ul > li:last-child img {
+  margin-left: 3px;
+}
+
+#user-dropdown > ul > li {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: var(--whiskey-gold);
+  font-family: "Palatino", "Georgia", serif;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+
+#user-dropdown > ul > li:last-child {
+  margin-bottom: 0px;
+}
+
+#user-dropdown > ul > li:hover {
+  cursor: pointer;
+  color: var(--whiskey-orange);
+  transform: translateX(3px);
+}
+
+/* 區塊標題 */
+.p-3 {
+  color: var(--whiskey-deep-amber);
+  font-weight: bold;
+  border-left: 4px solid var(--whiskey-gold);
+  padding-left: 15px !important;
+  font-family: "Palatino", "Georgia", serif;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* 卡片樣式 */
+.card {
+  border-color: var(--whiskey-copper);
+  box-shadow: 0 5px 15px rgba(89, 32, 19, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--whiskey-light);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(89, 32, 19, 0.2);
+}
+
+.card-body {
+  padding: 0px;
+}
+
+.card-footer {
+  background-color: rgba(184, 115, 51, 0.1);
+  border-top: 1px solid var(--whiskey-copper);
+}
+
+.card-footer img {
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-footer img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.content-container {
+  padding: 12px;
+}
+
+.card-title {
+  color: var(--whiskey-deep-amber);
+  font-family: "Palatino", "Georgia", serif;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: var(--whiskey-charcoal);
+  font-family: "Georgia", serif;
+}
+
+/* 統一card圖片的高寬 */
+.img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  /* 設定1:1比例的背板 */
+  overflow: hidden;
+  border-bottom: 1px solid var(--whiskey-copper);
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 保持圖片比例填滿容器 */
+  border-radius: 0;
+  transition: all 0.5s ease;
+}
+
+.card-img:hover {
+  scale: 1.05;
+  filter: brightness(1.05);
+}
+
+/* 討論區 */
+.disc {
+  background-color: rgba(163, 82, 44, 0.05);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+.disc .row > .col {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--whiskey-copper);
+  margin-bottom: 15px;
+}
+
+.disc .row > .col:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.disc-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: var(--whiskey-charcoal);
+  font-family: "Georgia", serif;
+}
+
+.disc-imgCon {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  /* 設定4:3比例的背板 */
+}
+
+.disc-imgCon img {
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.disc a {
+  color: var(--whiskey-charcoal);
+  text-decoration: none;
+}
+
+.disc a:hover p {
+  color: var(--whiskey-rust);
+}
+
+.disc p.fw-bold {
+  font-family: "Palatino", "Georgia", serif;
+  color: var(--whiskey-deep-amber);
+  transition: color 0.3s ease;
+}
+
+/* 酒吧地圖 */
+.map {
+  background-color: rgba(212, 175, 55, 0.05);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+.bar-container {
+  background-color: var(--whiskey-light);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid var(--whiskey-copper);
+}
+
+.bar-info {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--whiskey-copper);
+  margin-bottom: 15px;
+}
+
+.bar-info:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.bar-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--whiskey-deep-amber);
+  font-family: "Palatino", "Georgia", serif;
+}
+
+.distance {
+  color: var(--whiskey-rust);
+  font-weight: bold;
+}
+
+.status {
+  padding: 10px;
+  background-color: var(--whiskey-light);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  align-items: center;
+  border: 1px solid var(--whiskey-copper);
+  color: var(--whiskey-charcoal);
+  font-family: "Georgia", serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.map .btn {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 0px;
+  background-color: var(--whiskey-light);
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.map .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map .btn img {
+  height: 50px;
+  filter: sepia(40%) saturate(1000%) hue-rotate(340deg);
+}
+
+.loading {
+  text-align: center;
+  margin: 20px 0;
+  color: var(--whiskey-deep-amber);
+  font-family: "Georgia", serif;
+}
+
+.error {
+  color: var(--whiskey-rust);
+  text-align: center;
+  margin: 20px 0;
+  font-family: "Georgia", serif;
+}
+
+/* 邊框和小知識區塊 */
+.know {
+  background-color: rgba(184, 115, 51, 0.05);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.know-imgCon {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  /* 設定4:3比例的背板 */
+}
+
+.know-imgCon img {
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--whiskey-copper);
+}
+
+.know a {
+  color: var(--whiskey-deep-amber);
+  text-decoration: none;
+  font-family: "Palatino", "Georgia", serif;
+  transition: all 0.3s ease;
+}
+
+.know .row.pt-4:hover a {
+  text-decoration: underline;
+  color: var(--whiskey-rust);
+}
+
+.know ul {
+  color: var(--whiskey-charcoal);
+  font-family: "Georgia", serif;
+}
+
+.know ul li {
+  padding: 3px 0;
+}
+
+/* offcanvas-nav樣式 */
+#offcanvas-nav {
+  background-color: var(--whiskey-cream);
+  border-right: 1px solid var(--whiskey-copper);
+}
+
+#offcanvas-nav .offcanvas-header {
+  background-color: var(--whiskey-charcoal);
+}
+
+#offcanvas-nav ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+#offcanvas-nav ul li {
+  margin-bottom: 20px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--whiskey-copper);
+  transition: all 0.3s ease;
+}
+
+#offcanvas-nav ul li:hover {
+  transform: translateX(5px);
+}
+
+#offcanvas-nav ul li a {
+  text-decoration: none;
+  color: var(--whiskey-deep-amber);
+  font-family: "Palatino", "Georgia", serif;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+#offcanvas-nav ul li a:hover {
+  color: var(--whiskey-rust);
+}
+
+/* 回到頂部按鈕 */
+.bi-arrow-up-circle-fill {
+  color: var(--whiskey-gold);
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.bi-arrow-up-circle-fill:hover {
+  color: var(--whiskey-rust);
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* 搜尋框 */
+input[type="search"] {
+  border: 1px solid var(--whiskey-copper);
+  background-color: var(--whiskey-light);
+  color: var(--whiskey-charcoal);
+  font-family: "Georgia", serif;
+}
+
+input[type="search"]:focus {
+  border-color: var(--whiskey-gold);
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+#collapse-search {
+  position: fixed;
+  background-color: var(--whiskey-charcoal);
+  width: 100%;
+  z-index: 1;
+  padding: 10px 15px;
+}
+
+#collapse-search > input {
+  height: 36px;
+  background-color: var(--whiskey-light);
+  border: 1px solid var(--whiskey-copper);
+}
+
+/* 頁腳 */
+footer {
+  background-color: var(--whiskey-charcoal);
+  color: var(--whiskey-cream);
+  margin-top: 50px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Georgia", serif;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--whiskey-gold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--whiskey-orange);
+  text-decoration: underline;
+}
