@@ -57,332 +57,336 @@
 
 
 
-    <!-- The Modal -->
-    <div class="modal" id="loginModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <main>
+        <!-- The Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">會員登入系統</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="d-flex">
-                        <div id="login">登入</div>
-                        <div id="register">註冊</div>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">會員登入系統</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <hr>
 
-                    <form action="" id="login-form">
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control" id="account" placeholder="電子信箱" name="account">
-                            <label for="account">電子信箱</label>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="d-flex">
+                            <div id="login">登入</div>
+                            <div id="register">註冊</div>
                         </div>
+                        <hr>
 
-                        <div class="form-floating mb-2">
-                            <input type="password" class="form-control" id="password" placeholder="密碼" name="password">
-                            <label for="password">密碼</label>
-                        </div>
-
-                        <div class="check-box d-flex">
-                            <div>
-                                <input type="checkbox" id="remember"><label for="remember">記住我</label>
+                        <form action="" id="login-form">
+                            <div class="form-floating mb-2">
+                                <input type="email" class="form-control" id="account" placeholder="電子信箱" name="account">
+                                <label for="account">電子信箱</label>
                             </div>
 
-                            <div>
-                                <input type="checkbox" id="keep"><label for="keep">保持登入狀態</label>
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control" id="password" placeholder="密碼"
+                                    name="password">
+                                <label for="password">密碼</label>
                             </div>
-                        </div>
 
-                        <div class="d-flex">
-                            <button type="submit" class="btn mx-auto w-50" id="submit-btn">登入</button>
-                        </div>
-                    </form>
+                            <div class="check-box d-flex">
+                                <div>
+                                    <input type="checkbox" id="remember"><label for="remember">記住我</label>
+                                </div>
 
-                    <form action="" class="d-none" id="register-form">
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control" id="register-account" placeholder="電子信箱"
-                                name="register-account">
-                            <label for="account">電子信箱</label>
-                        </div>
+                                <div>
+                                    <input type="checkbox" id="keep"><label for="keep">保持登入狀態</label>
+                                </div>
+                            </div>
 
-                        <div class="form-floating mb-2">
-                            <input type="password" class="form-control" id="register-password" placeholder="密碼"
-                                name="register-password">
-                            <label for="password">密碼</label>
-                        </div>
+                            <div class="d-flex">
+                                <button type="submit" class="btn mx-auto w-50" id="submit-btn">登入</button>
+                            </div>
+                        </form>
 
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control" id="register-name" placeholder="名字"
-                                name="register-name">
-                            <label for="password">名字</label>
-                        </div>
+                        <form action="" class="d-none" id="register-form">
+                            <div class="form-floating mb-2">
+                                <input type="email" class="form-control" id="register-account" placeholder="電子信箱"
+                                    name="register-account">
+                                <label for="account">電子信箱</label>
+                            </div>
 
-                        <div class="d-flex">
-                            <button type="submit" class="btn mx-auto w-50" id="register-submit-btn">註冊</button>
-                        </div>
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control" id="register-password" placeholder="密碼"
+                                    name="register-password">
+                                <label for="password">密碼</label>
+                            </div>
 
-                    </form>
-                </div>
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" id="register-name" placeholder="名字"
+                                    name="register-name">
+                                <label for="password">名字</label>
+                            </div>
 
-                <!-- Modal footer -->
-                <!-- <div class="modal-footer">
+                            <div class="d-flex">
+                                <button type="submit" class="btn mx-auto w-50" id="register-submit-btn">註冊</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer">
                     <button type="button" class="btn mx-auto w-50">登入</button>
                 </div> -->
 
+                </div>
             </div>
         </div>
-    </div>
 
 
 
-    <div class="collapse" id="user-dropdown">
-        <ul class="shadow">
-            <li class="d-flex"><img src="./圖/heart (1).png"> 喜歡</li>
-            <li class="d-flex"><img src="./圖/ribbon.png"> 珍藏</li>
-            <li class="d-flex" id="signout"><img src="./圖/exit.png"> 登出</li>
-        </ul>
-    </div>
-
-
-
-    <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvas-nav" aria-labelledby="offcanvas-navLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvas-navLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body">
-            <ul>
-                <li><a href="./首頁.html">首頁</li></a>
-                <li><a href="./酒譜專區.html">酒譜專區</li></a>
-                <li><a href="./討論區.html">討論區</li></a>
-                <li><a href="./酒吧地圖.html">酒吧地圖</li></a>
-                <li><a href="./小知識.html">小知識</li></a>
-                <li><a href="#">關於我們</li></a>
+        <div class="collapse" id="user-dropdown">
+            <ul class="shadow">
+                <li class="d-flex"><img src="./圖/heart (1).png"> 喜歡</li>
+                <li class="d-flex"><img src="./圖/ribbon.png"> 珍藏</li>
+                <li class="d-flex" id="signout"><img src="./圖/exit.png"> 登出</li>
             </ul>
         </div>
-    </div>
 
 
 
-
-
-    <div class="collapse  d-sm-none" id="collapse-search">
-        <input class="w-100 rounded-pill px-3" type="search" placeholder="搜尋 口袋酒吧">
-    </div>
-
-
-
-
-
-    <section class="recipe">
-        <div class="container pt-5 px-4 pb-3">
-            <div class="p-3">在家也想DIY</div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-6 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="img-container">
-                                <a href="#"><img class="card-img" src="./圖/gin-tonic.jpg"></a>
-                            </div>
-                            <div class="content-container">
-                                <h5 class="card-title">Gin Tonic</h5>
-                                <p class="card-text">簡單清爽的經典調酒，以琴酒和通寧水為基底。</p>
-                            </div>
-                        </div>
-                        <div class="card-footer text-end">
-                            <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
-                            <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="img-container">
-                                <a href="#"><img class="card-img" src="./圖/old-fashion.jpg"></a>
-                            </div>
-                            <div class="content-container">
-                                <h5 class="card-title">Old Fashion</h5>
-                                <p class="card-text">簡約經典的威士忌雞尾酒，帶有苦精香氣和細微甜味。</p>
-                            </div>
-                        </div>
-                        <div class="card-footer text-end">
-                            <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
-                            <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="img-container">
-                                <a href="#"><img class="card-img" src="./圖/daiquiri.jpg"></a>
-                            </div>
-                            <div class="content-container">
-                                <h5 class="card-title">Daiquiri</h5>
-                                <p class="card-text">優雅的香檳雞尾酒，混合琴酒、檸檬汁和香檳。</p>
-                            </div>
-                        </div>
-                        <div class="card-footer text-end">
-                            <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
-                            <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-6 d-md-none d-lg-block mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="img-container">
-                                <a href="#"><img class="card-img" src="./圖/margarita.jpg"></a>
-                            </div>
-                            <div class="content-container">
-                                <h5 class="card-title">Margarita</h5>
-                                <p class="card-text">墨西哥風味的經典雞尾酒，以龍舌蘭、萊姆和橙酒調製。</p>
-                            </div>
-                        </div>
-                        <div class="card-footer text-end">
-                            <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
-                            <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-
-
-
-
-    <section class="disc">
-        <div class="container pt-5 px-4 pb-3">
-            <div class="d-flex">
-                <div class="p-3">只想待在家吃瓜</div>
-                <button class="ms-auto btn" id="post">發文</button>
+        <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvas-nav"
+            aria-labelledby="offcanvas-navLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvas-navLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
-            <div class="row row-cols-1 pt-4">
-                <div class="col">
-                    <a href="">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="fw-bold">來台中玩一定要去的酒吧！！</p>
-                                <span class="disc-text">這間酒吧在台中已經是老字號了，調酒師人都很nice，調酒都很有特色也好喝，重點是還會附免費菜圃餅讓客人搭配😋
-                                </span>
-                            </div>
-
-                            <div class="col-3 d-flex align-items-center">
-                                <div class="disc-imgCon">
-                                    <img src="./圖/puzzle-bar.jpg">
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="fw-bold">笑死 出這種酒不如買水來喝ㄟ😌</p>
-                                <span class="disc-text">原本想說終於放假了，可以和朋友好好爽喝一波，結果直接踩雷🫠 而且聽說調酒師背景很複雜，有人有卦嗎
-                                </span>
-                            </div>
-
-                            <div class="col-3 d-flex align-items-center">
-                                <div class="disc-imgCon">
-                                    <img src="./圖/吃瓜-2.png">
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="fw-bold">這間酒吧的宵夜超級驚艷！</p>
-                                <span class="disc-text">意想不到的是，這家酒吧的宵夜餐點太美味，根本和調酒一樣成為亮點😋
-                                </span>
-                            </div>
-
-                            <div class="col-3 d-flex align-items-center">
-                                <div class="disc-imgCon">
-                                    <img src="./圖/吃瓜-2.png">
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div class="offcanvas-body">
+                <ul>
+                    <li><a href="./首頁.html">首頁</li></a>
+                    <li><a href="./酒譜專區.html">酒譜專區</li></a>
+                    <li><a href="./討論區.html">討論區</li></a>
+                    <li><a href="./酒吧地圖.html">酒吧地圖</li></a>
+                    <li><a href="./小知識.html">小知識</li></a>
+                    <li><a href="#">關於我們</li></a>
+                </ul>
             </div>
         </div>
-    </section>
 
 
 
 
 
-    <section class="map">
-        <div class="container pt-5 px-4 pb-3">
-            <div class="p-3">出門買醉看這邊</div>
+        <div class="collapse  d-sm-none" id="collapse-search">
+            <input class="w-100 rounded-pill px-3" type="search" placeholder="搜尋 口袋酒吧">
+        </div>
 
-            <div class="pt-4">
+
+
+
+
+        <section class="recipe">
+            <div class="container pt-5 px-4 pb-3">
+                <div class="p-3">在家也想DIY</div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="img-container">
+                                    <a href="#"><img class="card-img" src="./圖/gin-tonic.jpg"></a>
+                                </div>
+                                <div class="content-container">
+                                    <h5 class="card-title">Gin Tonic</h5>
+                                    <p class="card-text">簡單清爽的經典調酒，以琴酒和通寧水為基底。</p>
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
+                                <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="img-container">
+                                    <a href="#"><img class="card-img" src="./圖/old-fashion.jpg"></a>
+                                </div>
+                                <div class="content-container">
+                                    <h5 class="card-title">Old Fashion</h5>
+                                    <p class="card-text">簡約經典的威士忌雞尾酒，帶有苦精香氣和細微甜味。</p>
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
+                                <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="img-container">
+                                    <a href="#"><img class="card-img" src="./圖/daiquiri.jpg"></a>
+                                </div>
+                                <div class="content-container">
+                                    <h5 class="card-title">Daiquiri</h5>
+                                    <p class="card-text">優雅的香檳雞尾酒，混合琴酒、檸檬汁和香檳。</p>
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
+                                <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-6 d-md-none d-lg-block mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="img-container">
+                                    <a href="#"><img class="card-img" src="./圖/margarita.jpg"></a>
+                                </div>
+                                <div class="content-container">
+                                    <h5 class="card-title">Margarita</h5>
+                                    <p class="card-text">墨西哥風味的經典雞尾酒，以龍舌蘭、萊姆和橙酒調製。</p>
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <img class="me-2 heart" src="./圖/heart (1).png" change-src="./圖/heart.png">
+                                <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+        <section class="disc">
+            <div class="container pt-5 px-4 pb-3">
                 <div class="d-flex">
-                    <div class="status me-3 d-flex" id="status">請允許定位服務存取您的位置資訊，以尋找附近的喝酒好去處！</div>
-                    <button class="btn ms-auto" id="findBars"><img src="./圖/map.png"></button>
+                    <div class="p-3">只想待在家吃瓜</div>
+                    <button class="ms-auto btn" id="post">發文</button>
                 </div>
 
-                <div class="loading" id="loading" style="display:none;">正在搜尋附近的酒吧...</div>
-                <div class="error" id="error" style="display:none;"></div>
+                <div class="row row-cols-1 pt-4">
+                    <div class="col">
+                        <a href="">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="fw-bold">來台中玩一定要去的酒吧！！</p>
+                                    <span class="disc-text">這間酒吧在台中已經是老字號了，調酒師人都很nice，調酒都很有特色也好喝，重點是還會附免費菜圃餅讓客人搭配😋
+                                    </span>
+                                </div>
 
-                <div class="bar-container" id="barResults" style="display:none;"></div>
+                                <div class="col-3 d-flex align-items-center">
+                                    <div class="disc-imgCon">
+                                        <img src="./圖/puzzle-bar.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="fw-bold">笑死 出這種酒不如買水來喝ㄟ😌</p>
+                                    <span class="disc-text">原本想說終於放假了，可以和朋友好好爽喝一波，結果直接踩雷🫠 而且聽說調酒師背景很複雜，有人有卦嗎
+                                    </span>
+                                </div>
+
+                                <div class="col-3 d-flex align-items-center">
+                                    <div class="disc-imgCon">
+                                        <img src="./圖/吃瓜-2.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <a href="">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="fw-bold">這間酒吧的宵夜超級驚艷！</p>
+                                    <span class="disc-text">意想不到的是，這家酒吧的宵夜餐點太美味，根本和調酒一樣成為亮點😋
+                                    </span>
+                                </div>
+
+                                <div class="col-3 d-flex align-items-center">
+                                    <div class="disc-imgCon">
+                                        <img src="./圖/吃瓜-2.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
 
 
-    <section class="know">
-        <div class="container pt-5 px-4">
-            <div class="p-3">每日一則小知識</div>
+        <section class="map">
+            <div class="container pt-5 px-4 pb-3">
+                <div class="p-3">出門買醉看這邊</div>
 
-            <div class="row pt-4">
-                <div class="col-md-9 d-flex align-items-center">
-                    <div class="w-100">
-                        <div>
-                            <p class="fw-bold"><a href="#">台灣在全球威士忌市場的影響力</a></p>
+                <div class="pt-4">
+                    <div class="d-flex">
+                        <div class="status me-3 d-flex" id="status">請允許定位服務存取您的位置資訊，以尋找附近的喝酒好去處！</div>
+                        <button class="btn ms-auto" id="findBars"><img src="./圖/map.png"></button>
+                    </div>
+
+                    <div class="loading" id="loading" style="display:none;">正在搜尋附近的酒吧...</div>
+                    <div class="error" id="error" style="display:none;"></div>
+
+                    <div class="bar-container" id="barResults" style="display:none;"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="know">
+            <div class="container pt-5 px-4">
+                <div class="p-3">每日一則小知識</div>
+
+                <div class="row pt-4">
+                    <div class="col-md-9 d-flex align-items-center">
+                        <div class="w-100">
+                            <div>
+                                <p class="fw-bold"><a href="#">台灣在全球威士忌市場的影響力</a></p>
+                            </div>
+
+                            <div class="h-100">
+                                <ul class="m-md-0 d-flex flex-column justify-content-evenly h-100"
+                                    style="min-height: 150px;">
+                                    <li class="mb-2">根據 2024 年數據，台灣是蘇格蘭威士忌的全球第 4 大進口國，僅次於美國、法國和新加坡。</li>
+                                    <li class="mb-2">在單一麥芽威士忌（Single Malt Whisky）進口量方面，台灣長期穩居全球第 1 名。</li>
+                                    <li>以人均威士忌消費量計算，台灣位居全球前 3 名，僅次於法國與新加坡。</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="h-100">
-                            <ul class="m-md-0 d-flex flex-column justify-content-evenly h-100"
-                                style="min-height: 150px;">
-                                <li class="mb-2">根據 2024 年數據，台灣是蘇格蘭威士忌的全球第 4 大進口國，僅次於美國、法國和新加坡。</li>
-                                <li class="mb-2">在單一麥芽威士忌（Single Malt Whisky）進口量方面，台灣長期穩居全球第 1 名。</li>
-                                <li>以人均威士忌消費量計算，台灣位居全球前 3 名，僅次於法國與新加坡。</li>
-                            </ul>
+                    <div class="col-md-3 d-flex align-items-center text-center">
+                        <div class="know-imgCon">
+                            <img src="./圖/一杯威士忌在酒吧吧檯上的特寫照 10-03-2025 at 21-52-40.jpeg">
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 d-flex align-items-center text-center">
-                    <div class="know-imgCon">
-                        <img src="./圖/一杯威士忌在酒吧吧檯上的特寫照 10-03-2025 at 21-52-40.jpeg">
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
 
