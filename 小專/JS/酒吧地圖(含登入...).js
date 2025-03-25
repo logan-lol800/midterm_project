@@ -162,6 +162,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   findBarsButton.addEventListener("click", function () {
+    document.getElementById("br-div").innerHTML = "<br><br><br>";
+
     if (navigator.geolocation) {
       // 顯示載入中
       statusElement.style.display = "none";
@@ -174,6 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
         function (positoin) {
           // 成功獲取位置
           loadingElement.style.display = "none";
+
+          document.getElementById("br-div").innerHTML = "";
 
           // 在實際應用中，這裡應該調用地圖API (如Google Maps)
           // 來獲取附近的酒吧，使用position.coords.latitude和position.coords.longitude
