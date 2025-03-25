@@ -12,7 +12,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="./CSS/首頁及通用.css">
+    <link rel="stylesheet" href="./CSS/test.css">
     <link rel="stylesheet" href="./CSS/討論區.css">
 </head>
 
@@ -183,7 +183,7 @@
     <div class="container pt-5 px-4">
         <div class="d-flex">
             <div class="p-3">討論區</div>
-            <button class="ms-auto btn">發文</button>
+            <button class="ms-auto btn" id="post">發文</button>
         </div>
 
         <div class="row row-cols-1 pt-4" id="article-container"></div>
@@ -194,23 +194,32 @@
 
 
     <footer>
-        <div class="text-center" style="padding: 56px 0;">
-            <p class="m-0"><a target="_blank" href="https://icons8.com/icon/aApiTlzfJ3tK/cocktail-shaker">Cocktail
-                    Shaker</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by
-                    Febrian Hidayat - Flaticon</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/login" title="login icons">Login icons created
-                    by Freepik - Flaticon</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons
-                    created by Freepik - Flaticon</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/map" title="map icons">Map icons created by
-                    Freepik - Flaticon</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created
-                    by Vlad Szirka - Flaticon</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/bookmark" title="bookmark icons">Bookmark icons
-                    created by inkubators - Flaticon</a></p>
-            <p class="m-0"><a href="https://www.flaticon.com/free-icons/signout" title="signout icons">Signout icons
-                    created by Shashank Singh - Flaticon</a></p>
+        <div class="row row-cols-1 row-cols-md-3 text-center" style="padding: 56px 0;">
+            <div class="col">
+                <h5 class="mb-3">聯絡我們</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">台中市西屯區猜猜我在哪路1號</a></li>
+                    <li><a href="mailto:pocketbar@mail.com">pocketbar@mail.com</a></li>
+                    <li><a href="tel:0912-345-678">0912-345-678</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h5 class="mb-3">關於我們</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">網站的起源</a></li>
+                    <li><a href="#">合作廠商</a></li>
+                </ul>
+            </div>
+
+            <div class="col social">
+                <h5 class="mb-3">社群媒體</h5>
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li><a href="#" target="_blank"><img src="./圖/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="./圖/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="./圖/twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 

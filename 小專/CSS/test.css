@@ -78,7 +78,7 @@ nav input {
 
 #searchImg {
   height: 20px;
-  filter: sepia(40%) saturate(500%) hue-rotate(340deg);
+  /* filter: sepia(40%) saturate(500%) hue-rotate(340deg); */
 }
 
 #btn-login {
@@ -175,6 +175,7 @@ nav input {
 }
 
 .modal-body div > button:hover {
+  color: var(--whiskey-light);
   background-color: var(--whiskey-rust);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(191, 79, 38, 0.3);
@@ -247,9 +248,9 @@ nav input {
 
 /* 區塊標題 */
 .p-3 {
-  color: var(--whiskey-deep-amber);
+  color: var(--whiskey-dark);
   font-weight: bold;
-  border-left: 4px solid var(--whiskey-gold);
+  border-left: 4px solid var(--whiskey-rust);
   padding-left: 15px !important;
   font-family: "Palatino", "Georgia", serif;
   font-size: 1.3rem;
@@ -339,8 +340,8 @@ nav input {
 
 /* 討論區 */
 .disc {
-  background-color: rgba(163, 82, 44, 0.05);
-  border-radius: 10px;
+  /* background-color: rgba(163, 82, 44, 0.05);
+  border-radius: 10px; */
   margin-top: 30px;
   padding-bottom: 10px;
 }
@@ -395,14 +396,14 @@ nav input {
 
 .disc p.fw-bold {
   font-family: "Palatino", "Georgia", serif;
-  color: var(--whiskey-deep-amber);
+  color: var(--whiskey-charcoal);
   transition: color 0.3s ease;
 }
 
 /* 酒吧地圖 */
 .map {
-  background-color: rgba(212, 175, 55, 0.05);
-  border-radius: 10px;
+  /* background-color: rgba(212, 175, 55, 0.05);
+  border-radius: 10px; */
   margin-top: 30px;
   padding-bottom: 10px;
 }
@@ -469,7 +470,7 @@ nav input {
 
 .map .btn img {
   height: 50px;
-  filter: sepia(40%) saturate(1000%) hue-rotate(340deg);
+  /* filter: sepia(40%) saturate(1000%) hue-rotate(340deg); */
 }
 
 .loading {
@@ -486,10 +487,10 @@ nav input {
   font-family: "Georgia", serif;
 }
 
-/* 邊框和小知識區塊 */
+/* 小知識 */
 .know {
-  background-color: rgba(184, 115, 51, 0.05);
-  border-radius: 10px;
+  /* background-color: rgba(184, 115, 51, 0.05);
+  border-radius: 10px; */
   margin-top: 30px;
   padding-bottom: 20px;
 }
@@ -514,7 +515,7 @@ nav input {
 }
 
 .know a {
-  color: var(--whiskey-deep-amber);
+  color: var(--whiskey-charcoal);
   text-decoration: none;
   font-family: "Palatino", "Georgia", serif;
   transition: all 0.3s ease;
@@ -538,10 +539,6 @@ nav input {
 #offcanvas-nav {
   background-color: var(--whiskey-cream);
   border-right: 1px solid var(--whiskey-copper);
-}
-
-#offcanvas-nav .offcanvas-header {
-  background-color: var(--whiskey-charcoal);
 }
 
 #offcanvas-nav ul {
@@ -576,7 +573,7 @@ nav input {
 
 /* 回到頂部按鈕 */
 .bi-arrow-up-circle-fill {
-  color: var(--whiskey-gold);
+  color: var(--whiskey-rust);
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
 }
@@ -621,7 +618,7 @@ footer {
   margin-top: 50px;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
   font-family: "Georgia", serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 footer a {
@@ -633,4 +630,79 @@ footer a {
 footer a:hover {
   color: var(--whiskey-orange);
   text-decoration: underline;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+footer .social li a:hover {
+  text-decoration: none;
+}
+
+footer .social li img {
+  height: 30px;
+}
+
+footer .social li {
+  margin-right: 16px;
+}
+footer .social li:last-child {
+  margin-right: 0px;
+}
+
+@media (max-width: 768px) {
+  footer ul {
+    margin: 0 0 50px;
+  }
+
+  footer ul:last-child {
+    margin: 0 0 30px;
+  }
+}
+
+/* 分頁按鈕樣式 */
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.page-button {
+  background-color: var(--whiskey-light);
+  color: var(--whiskey-charcoal);
+  border: 1px solid var(--whiskey-copper);
+  margin: 0 5px;
+  padding: 8px 16px;
+  font-family: "Palatino", "Georgia", serif;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-button:hover {
+  background-color: var(--whiskey-deep-amber);
+  color: var(--whiskey-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-button.active {
+  background-color: var(--whiskey-rust);
+  color: var(--whiskey-light);
+  border-color: var(--whiskey-rust);
+}
+
+.page-button.disabled {
+  background-color: var(--whiskey-light);
+  color: var(--whiskey-brown);
+  border-color: var(--whiskey-brown);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
 }

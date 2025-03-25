@@ -30,6 +30,7 @@ document.getElementById("login-form").addEventListener("submit", () => {
     localStorage.setItem("username", user.name);
     document.getElementById("btn-login").classList.add("d-none");
     document.getElementById("user-img").classList.remove("d-none");
+    window.location.assign("./首頁.html");
   } else {
     alert("帳號或密碼錯誤，請重試謝謝！");
   }
@@ -65,11 +66,10 @@ document.getElementById("signout").addEventListener("click", () => {
   alert("已登出！");
   document.getElementById("btn-login").classList.remove("d-none");
   document.getElementById("user-img").classList.add("d-none");
-  // 粗糙一次性登出！
-  document.getElementById("user-dropdown").classList.add("d-none");
+  window.location.assign("./首頁.html");
 });
 
-// 愛心、珍藏功能
+// 愛心、珍藏功能(一次性)
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".heart, .ribbon").forEach((icon) => {
     icon.addEventListener("click", function () {

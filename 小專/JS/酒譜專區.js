@@ -348,15 +348,21 @@ function renderPagination() {
   window.scrollTo(0, 0);
 }
 
-// 愛心、珍藏功能
+// 使用事件委派綁定愛心、珍藏功能
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".heart, .ribbon").forEach((icon) => {
-    icon.addEventListener("click", function () {
-      let currentSrc = this.getAttribute("src");
-      let changeSrc = this.getAttribute("change-src");
+  // 使用事件委派，監聽父容器
+  document
+    .getElementById("card-container")
+    .addEventListener("click", function (event) {
+      // 檢查點擊的是否是愛心或珍藏圖標
+      const icon = event.target.closest(".heart, .ribbon");
 
-      this.setAttribute("src", changeSrc);
-      this.setAttribute("change-src", currentSrc);
+      if (icon) {
+        let currentSrc = icon.getAttribute("src");
+        let changeSrc = icon.getAttribute("change-src");
+
+        icon.setAttribute("src", changeSrc);
+        icon.setAttribute("change-src", currentSrc);
+      }
     });
-  });
 });

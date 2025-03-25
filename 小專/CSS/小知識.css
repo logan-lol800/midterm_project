@@ -1,4 +1,4 @@
-/* 邊框和小知識區塊 */
+/* 小知識 */
 .knowledge .img-cont {
   position: relative;
   width: 100%;
@@ -15,6 +15,8 @@
   object-fit: cover;
 }
 
-/* .row.border.rounded {
-  background-color: rgba(242, 204, 92, 0.1);
-} */
+.card-header {
+  background-color: rgba(184, 115, 51, 0.1);
+  color: var(--whiskey-charcoal);
+  font-weight: bold;
+}
