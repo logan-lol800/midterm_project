@@ -58,150 +58,154 @@
 
 
 
-    <!-- The Modal -->
-    <div class="modal" id="loginModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <main>
+        <!-- The Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">會員登入系統</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="d-flex">
-                        <div id="login">登入</div>
-                        <div id="register">註冊</div>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">會員登入系統</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <hr>
 
-                    <form action="" id="login-form">
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control" id="account" placeholder="電子信箱" name="account">
-                            <label for="account">電子信箱</label>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="d-flex">
+                            <div id="login">登入</div>
+                            <div id="register">註冊</div>
                         </div>
+                        <hr>
 
-                        <div class="form-floating mb-2">
-                            <input type="password" class="form-control" id="password" placeholder="密碼" name="password">
-                            <label for="password">密碼</label>
-                        </div>
-
-                        <div class="check-box d-flex">
-                            <div>
-                                <input type="checkbox" id="remember"><label for="remember">記住我</label>
+                        <form action="" id="login-form">
+                            <div class="form-floating mb-2">
+                                <input type="email" class="form-control" id="account" placeholder="電子信箱" name="account">
+                                <label for="account">電子信箱</label>
                             </div>
 
-                            <div>
-                                <input type="checkbox" id="keep"><label for="keep">保持登入狀態</label>
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control" id="password" placeholder="密碼"
+                                    name="password">
+                                <label for="password">密碼</label>
                             </div>
-                        </div>
 
-                        <div class="d-flex">
-                            <button type="submit" class="btn mx-auto w-50" id="submit-btn">登入</button>
-                        </div>
-                    </form>
+                            <div class="check-box d-flex">
+                                <div>
+                                    <input type="checkbox" id="remember"><label for="remember">記住我</label>
+                                </div>
 
-                    <form action="" class="d-none" id="register-form">
-                        <div class="form-floating mb-2">
-                            <input type="email" class="form-control" id="register-account" placeholder="電子信箱"
-                                name="register-account">
-                            <label for="account">電子信箱</label>
-                        </div>
+                                <div>
+                                    <input type="checkbox" id="keep"><label for="keep">保持登入狀態</label>
+                                </div>
+                            </div>
 
-                        <div class="form-floating mb-2">
-                            <input type="password" class="form-control" id="register-password" placeholder="密碼"
-                                name="register-password">
-                            <label for="password">密碼</label>
-                        </div>
+                            <div class="d-flex">
+                                <button type="submit" class="btn mx-auto w-50" id="submit-btn">登入</button>
+                            </div>
+                        </form>
 
-                        <div class="form-floating mb-2">
-                            <input type="text" class="form-control" id="register-name" placeholder="名字"
-                                name="register-name">
-                            <label for="password">名字</label>
-                        </div>
+                        <form action="" class="d-none" id="register-form">
+                            <div class="form-floating mb-2">
+                                <input type="email" class="form-control" id="register-account" placeholder="電子信箱"
+                                    name="register-account">
+                                <label for="account">電子信箱</label>
+                            </div>
 
-                        <div class="d-flex">
-                            <button type="submit" class="btn mx-auto w-50" id="register-submit-btn">註冊</button>
-                        </div>
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control" id="register-password" placeholder="密碼"
+                                    name="register-password">
+                                <label for="password">密碼</label>
+                            </div>
 
-                    </form>
-                </div>
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" id="register-name" placeholder="名字"
+                                    name="register-name">
+                                <label for="password">名字</label>
+                            </div>
 
-                <!-- Modal footer -->
-                <!-- <div class="modal-footer">
+                            <div class="d-flex">
+                                <button type="submit" class="btn mx-auto w-50" id="register-submit-btn">註冊</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer">
                     <button type="button" class="btn mx-auto w-50">登入</button>
                 </div> -->
 
+                </div>
             </div>
         </div>
-    </div>
 
 
 
-    <div class="collapse" id="user-dropdown">
-        <ul class="shadow">
-            <li class="d-flex"><img src="./圖/heart (1).png"> 喜歡</li>
-            <li class="d-flex"><img src="./圖/ribbon.png"> 珍藏</li>
-            <li class="d-flex" id="signout"><img src="./圖/exit.png"> 登出</li>
-        </ul>
-    </div>
-
-
-
-    <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvas-nav" aria-labelledby="offcanvas-navLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvas-navLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body">
-            <ul>
-                <li><a href="./首頁.html">首頁</li></a>
-                <li><a href="./酒譜專區.html">酒譜專區</li></a>
-                <li><a href="./討論區.html">討論區</li></a>
-                <li><a href="./酒吧地圖.html">酒吧地圖</li></a>
-                <li><a href="./小知識.html">小知識</li></a>
-                <li><a href="#">關於我們</li></a>
+        <div class="collapse" id="user-dropdown">
+            <ul class="shadow">
+                <li class="d-flex"><img src="./圖/heart (1).png"> 喜歡</li>
+                <li class="d-flex"><img src="./圖/ribbon.png"> 珍藏</li>
+                <li class="d-flex" id="signout"><img src="./圖/exit.png"> 登出</li>
             </ul>
         </div>
-    </div>
+
+
+
+        <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvas-nav"
+            aria-labelledby="offcanvas-navLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvas-navLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul>
+                    <li><a href="./首頁.html">首頁</li></a>
+                    <li><a href="./酒譜專區.html">酒譜專區</li></a>
+                    <li><a href="./討論區.html">討論區</li></a>
+                    <li><a href="./酒吧地圖.html">酒吧地圖</li></a>
+                    <li><a href="./小知識.html">小知識</li></a>
+                    <li><a href="#">關於我們</li></a>
+                </ul>
+            </div>
+        </div>
 
 
 
 
 
-    <div class="collapse  d-sm-none" id="collapse-search">
-        <input class="w-100 rounded-pill px-3" type="search" placeholder="搜尋 口袋酒吧">
-    </div>
+        <div class="collapse  d-sm-none" id="collapse-search">
+            <input class="w-100 rounded-pill px-3" type="search" placeholder="搜尋 口袋酒吧">
+        </div>
 
 
 
 
 
-    <!-- <div class="container pt-5 px-4">
+        <!-- <div class="container pt-5 px-4">
         <div class="p-3">酒譜專區</div>
 
         <div class="grid" id="card-container"></div>
 
         <div id="pagination-container"></div>
     </div> -->
-    <div class="container pt-5 px-4">
-        <div class="p-3">酒譜專區</div>
+        <div class="container pt-5 px-4">
+            <div class="p-3">酒譜專區</div>
 
-        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2" id="card-container"></div>
+            <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2" id="card-container"></div>
 
-        <div id="pagination-container"></div>
-    </div>
+            <div id="pagination-container"></div>
+        </div>
+    </main>
 
 
 
     <footer>
         <div class="row row-cols-1 row-cols-md-3 text-center" style="padding: 56px 0;">
             <div class="col">
-                <h5 class="mb-3">聯絡我們</h5>
-                <ul class="list-unstyled">
+                <h5 class="mb-2">聯絡我們</h5>
+                <ul>
                     <li><a href="#">台中市西屯區猜猜我在哪路1號</a></li>
                     <li><a href="mailto:pocketbar@mail.com">pocketbar@mail.com</a></li>
                     <li><a href="tel:0912-345-678">0912-345-678</a></li>
@@ -209,16 +213,17 @@
             </div>
 
             <div class="col">
-                <h5 class="mb-3">關於我們</h5>
-                <ul class="list-unstyled">
+                <h5 class="mb-2">關於我們</h5>
+                <ul>
                     <li><a href="#">網站的起源</a></li>
+                    <li><a href="#">斗內專區</a></li>
                     <li><a href="#">合作廠商</a></li>
                 </ul>
             </div>
 
             <div class="col social">
-                <h5 class="mb-3">社群媒體</h5>
-                <ul class="list-unstyled d-flex justify-content-center">
+                <h5 class="mb-2">社群媒體</h5>
+                <ul class="d-flex justify-content-center">
                     <li><a href="#" target="_blank"><img src="./圖/facebook.png" alt="Facebook"></a></li>
                     <li><a href="#" target="_blank"><img src="./圖/instagram.png" alt="Instagram"></a></li>
                     <li><a href="#" target="_blank"><img src="./圖/twitter.png" alt="Twitter"></a></li>

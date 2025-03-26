@@ -260,10 +260,9 @@ function renderCards(page) {
 
     // 生成新卡片的div
     const recipeCard = document.createElement("div");
-    recipeCard.className = "recipe-card";
+    recipeCard.className = "col mt-4";
 
     recipeCard.innerHTML = `
-        <div class="col mt-4">
             <div class="card">
                 <div class="card-body">
                     <div class="img-container">
@@ -279,7 +278,6 @@ function renderCards(page) {
                     <img class="ribbon" src="./圖/ribbon.png" change-src="./圖/ribbon (1).png">
                 </div>
             </div>
-        </div>
 `;
 
     // 將生成的div元素加入至card-container

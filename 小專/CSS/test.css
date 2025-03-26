@@ -19,6 +19,16 @@ body {
   background-color: var(--whiskey-cream);
   color: var(--whiskey-charcoal);
   font-family: "Georgia", serif;
+
+  /* 位內容不足時做準備 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  /* 內容不足時，內容依舊占滿剩餘空間 */
+  flex: 1;
 }
 
 /* 畫面寬度設定 */
@@ -265,6 +275,7 @@ nav input {
   overflow: hidden;
   transition: all 0.3s ease;
   background-color: var(--whiskey-light);
+  height: 100%;
 }
 
 .card:hover {
@@ -274,6 +285,9 @@ nav input {
 
 .card-body {
   padding: 0px;
+  /* 當左右卡片名字行數不同時，為其做準備 */
+  display: flex;
+  flex-direction: column;
 }
 
 .card-footer {
@@ -293,6 +307,11 @@ nav input {
 
 .content-container {
   padding: 12px;
+  /* 當左右卡片名字行數不同時，使其占滿剩餘空間 */
+  flex: 1;
+  /* 為描述靠底做準備 */
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
@@ -309,6 +328,8 @@ nav input {
   overflow: hidden;
   color: var(--whiskey-charcoal);
   font-family: "Georgia", serif;
+  /* 將描述靠底部 */
+  margin-top: auto;
 }
 
 /* 統一card圖片的高寬 */
@@ -400,6 +421,23 @@ nav input {
   transition: color 0.3s ease;
 }
 
+#post {
+  background-color: var(--whiskey-deep-amber);
+  border-color: var(--whiskey-deep-amber);
+  color: var(--whiskey-light);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  height: 37.6px;
+  margin-right: 20px;
+}
+
+#post:hover {
+  background-color: var(--whiskey-rust);
+  border-color: var(--whiskey-rust);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(191, 79, 38, 0.3);
+}
+
 /* 酒吧地圖 */
 .map {
   /* background-color: rgba(212, 175, 55, 0.05);
@@ -456,6 +494,7 @@ nav input {
 .map .btn {
   padding: 10px;
   margin-bottom: 20px;
+  margin-right: 20px;
   border: 0px;
   background-color: var(--whiskey-light);
   border-radius: 50%;
@@ -653,12 +692,24 @@ footer .social li:last-child {
   margin-right: 0px;
 }
 
+@media (min-width: 992px) {
+  footer > div.row {
+    margin: 0 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  footer > div.row {
+    margin: 0 10px;
+  }
+}
+
 @media (max-width: 768px) {
   footer ul {
-    margin: 0 0 50px;
+    margin: 0 0 40px;
   }
 
-  footer ul:last-child {
+  footer .social ul {
     margin: 0 0 30px;
   }
 }
